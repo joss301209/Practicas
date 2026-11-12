@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="titulo">Mi primera página</h1>
+    <button id="boton">Cambiar texto</button>
+
+    <script>
+
+
+        const boton = document.getElementById("boton");
+        const titulo = document.getElementById("titulo");
+
+        boton.addEventListener("click", function() {
+       titulo.textContent = "¡Estoy aprendiendo JavaScript!";
+        }); 
+    </script>
+    <br>
+    <a href="index.html" class="btn-inicio">Inicio</a>
+</body>
+</html>

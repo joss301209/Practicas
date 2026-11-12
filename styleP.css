@@ -1,0 +1,158 @@
+
+/* =========================================================
+   ESTILOS GENERALES Y TEMA NOCHE ESTRELLADA
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    color: #e0f2fe;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Canvas para las constelaciones animadas en segundo plano */
+#constellations-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1.8rem 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(56, 189, 248, 0.2);
+    max-width: 900px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #38bdf8;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+    margin-bottom: 0.4rem;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+/* =========================================================
+   SECCIONES Y EXPLICACIONES
+   ========================================================= */
+section {
+    max-width: 1100px;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1.8rem 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+section h2 {
+    color: #7dd3fc;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+    padding-bottom: 0.4rem;
+}
+
+section p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+code {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9em;
+}
+
+/* =========================================================
+   GRILLA DE BOTONES (TARJETAS ESTILO MENÚ)
+   ========================================================= */
+section ul {
+    list-style: none; /* Elimina los puntos/viñetas */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1rem;
+    padding: 0;
+}
+
+section ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 65px;
+    padding: 0.8rem 1rem;
+    background: rgba(30, 41, 59, 0.85);
+    color: #e2e8f0;
+    text-decoration: none; /* Quita el subrayado feo del link */
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover brillante al pasar el cursor por encima */
+section ul li a:hover {
+    background: rgba(56, 189, 248, 0.25);
+    color: #ffffff;
+    border-color: #38bdf8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.45),
+                0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+/* =========================================================
+   DISEÑO ADAPTATIVO (RESPONSIVE)
+   ========================================================= */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+    section {
+        padding: 1.2rem 1rem;
+    }
+    section ul {
+        grid-template-columns: 1fr;
+    }
+}
+
